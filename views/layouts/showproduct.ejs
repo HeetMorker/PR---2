@@ -1,0 +1,72 @@
+<%- include('../Partials/Header') %>
+ <!-- MAIN ADD DATA FORM -->
+ <div class="titlebar-inner">
+    <div class="container titlebar-container">
+        <div class="row titlebar-container justify-center">
+            <div class="col titlebar-col col-xl-6 col-lg-8 col-12 text-center text-gray-400">
+                <h1>Show Product</h1>
+                <p class="leading-20">We are here to show the details​</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<main class="content" id="lqd-site-content">
+    <div id="lqd-contents-wrap">
+        <section class="lqd-section form pt-40 pb-100" id="form">
+            <div class="container module-container">
+                <div class="row">
+                    <div class="col col-12 p-0 module-col">
+                        <div class="w-full enitre-section relative bg-white rounded-10 transition-all shadow-md module-form">
+                                <div class=" relative pt-5 px-10 pb-10 sm:w-full d-flex justify-between" >
+                                    <h2 class="mb-4 text-28 font-bold text-center" style="text-align: center;">Show User Information</h2>
+                                    <a href="/addproduct" class="btn btn-solid p-4 btn-icon-left btn-has-label text-15 font-medium leading-22 rounded-6 mb-20 text-white bg-blue-800 btn-dark">Add User</a>
+                                </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Full Name</th>
+                                        <th>Email ID</th>
+                                        <th>Password</th>
+                                        <th>Delivery Type</th>
+                                        <th>Message</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% user.forEach((user, index)=> { %>
+                                        <tr>
+                                            <td>
+                                                <%=user.name%>
+                                            </td>
+                                            <td>
+                                                <%=user.email%>
+                                            </td>
+                                            <td>
+                                                <%=user.password%>
+                                            </td>
+                                            <td>
+                                                <%=user.deliverytype%>
+                                            </td>
+                                            <td>
+                                                <%=user.message%>
+                                            </td>
+                                            <td>
+                                                <a href="/editproduct/<%-index %>" class="btn btn-success rounded-6 bg-green-500 text-white p-4">Edit</a>
+                                                <a href="/deleteuser/<%-index %>" class="btn btn-success rounded-6 bg-danger-400 text-white p-4">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+
+<%- include('../Partials/footer') %>

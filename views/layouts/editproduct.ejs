@@ -1,0 +1,95 @@
+<%- include('../Partials/Header') %>
+
+    <!-- MAIN ADD DATA FORM -->
+    <div class="titlebar-inner">
+        <div class="container titlebar-container">
+            <div class="row titlebar-container justify-center">
+                <div class="col titlebar-col col-xl-6 col-lg-8 col-12 text-center text-gray-400">
+                    <h1>Edit User</h1>
+                    <p class="leading-20">We are here to Edit the User​</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <main class="content" id="lqd-site-content">
+        <div id="lqd-contents-wrap">
+            <section class="lqd-section form pt-40 pb-100" id="form">
+                <div class="container module-container">
+                    <div class="row">
+                        <div class="col col-12 p-0 module-col">
+                            <div
+                                class="w-full relative bg-white rounded-10 transition-all shadow-md pt-60 px-70 pb-80 module-form">
+                                <div class="w-full relative flex flex-wrap items-center justify-between">
+                                    <div class="w-50percent relative pt-5 px-10 pb-10 sm:w-full">
+                                        <h2 class="ld-fh-element relative text-28 font-bold">Update User Information</h2>
+                                    </div>
+                                </div>
+                                <div
+                                    class="lqd-contact-form lqd-contact-form-inputs-round lqd-contact-form-button-block lqd-contact-form-button-lg lqd-contact-form-button-round lqd-contact-form-button-border-none lqd-contact-form-inputs-lg p-10">
+                                    <div role="form" class="lqd-cf mt-25" id="lqd-cf-form-contact" lang="en-US"
+                                        dir="ltr">
+                                        <div class="screen-reader-response">
+                                            <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                        </div>
+                                        <form action="" method="post" class="lqd-cf-form init"
+                                            novalidate="novalidate" data-status="init">
+                                            <div class="row -mx-15">
+                                                <!-- FULL NAME -->
+                                                <div class="col col-md-6 col-12 py-0 px-15"><span
+                                                        class="lqd-form-control-wrap text"><input type="text"
+                                                            name="name" value="<%=user.name%>" size="40"
+                                                            class="lqd-cf-form-control border-1 border-black-10 rounded-4 px-2em text-16 text-slate-700"
+                                                            aria-required="true" aria-invalid="false"
+                                                            placeholder="Full name" required></span></div>
+                                                <!-- EMAIL ID  -->
+                                                <div class="col col-md-6 col-12 py-0 px-15"><span
+                                                        class="lqd-form-control-wrap email"><input type="email"
+                                                            name="email" value="<%=user.email%>" size="40"
+                                                            class="lqd-cf-form-control border-1 border-black-10 rounded-4 px-2em text-16 text-slate-700"
+                                                            aria-required="true" aria-invalid="false"
+                                                            placeholder="Your email address" required></span>
+                                                </div>
+                                                <!-- PASSWORD  -->
+                                                <div class="col col-md-6 col-12 py-0 px-15"><span
+                                                        class="lqd-form-control-wrap text"><input type="password"
+                                                            name="password" value="<%=user.password%>" size="40"
+                                                            class="lqd-cf-form-control border-1 border-black-10 rounded-4 px-2em text-16 text-slate-700"
+                                                            aria-required="true" aria-invalid="false"
+                                                            placeholder="Your Password" required></span>
+
+                                                </div>
+                                                <!-- PHONE NUMBER -->
+                                                <div class="col col-md-6 col-12 py-0 px-15 d-flex align-items-center">
+                                                    <div class="cashondelivery">
+                                                     <input type="radio" id="cashondelivery" name="deliverytype"  value="<%=user.deliverytype%>" class="me-3" required>
+                                                     <label for="cashondelivery">Cash On Delivery</label>
+                                                    </div>
+                                                    <div class="paynow ms-4">
+                                                     <input type="radio" id="paynow" name="deliverytype" value="<%=user.deliverytype%>" class="me-3" required>
+                                                     <label for="paynow">Pay Now</label>
+                                                    </div>
+                                             </div>
+                                                <!-- MESSAGE -->
+                                                <div class="col col-12 py-0 px-15"><span
+                                                        class="lqd-form-control-wrap"><input name="message"
+                                                            value="<%=user.message%>" cols="10" rows="4"
+                                                            class="lqd-cf-form-control border-1 border-black-10 rounded-4 px-2em text-16 text-slate-700"
+                                                            aria-required="true" aria-invalid="false"
+                                                            placeholder="Your message" required></input></span></div>
+                                                <div class="col col-12 py-0 px-15">
+                                                    <button type="submit" class="lqd-cf-form-control has-spinner lqd-cf-submit bg-sky-800 text-white">Update</button>
+                                                </div>
+                                            </div>
+                                            <div class="lqd-cf-response-output" aria-hidden="true"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%- include('../Partials/Footer') %>
